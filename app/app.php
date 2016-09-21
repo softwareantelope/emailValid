@@ -8,7 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Message; 
 
+$app['debug'] = true;
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
+
+$app->get('/', function() {
+    $output = Message::welcome();
+    return new Response($output, 200);
+});
+
+$app->get('/send', function() use ($app) {
+    return $app->redirect('/');
+});
 
 $app->get('/valid', function () {
     $output = Message::messageTo();

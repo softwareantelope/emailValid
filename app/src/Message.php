@@ -3,7 +3,13 @@
 namespace App;
 
 class Message {
+
     public function __construct() {
+    }
+
+    public static function welcome() {
+	$output = `cat ../resource/views/welcome.html`;
+	return $output;
     }
 
     public static function messageTo() {
