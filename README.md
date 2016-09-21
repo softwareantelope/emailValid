@@ -2,7 +2,12 @@
 
 Silex mini ap - accepts an email address and sends an encrypted link for validation
 
-valid paths:
+Install
+1. git clone
+2. composer install
+
+
+valid URL paths:
 
 GET
 
