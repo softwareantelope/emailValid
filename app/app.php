@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Message; 
 
-$app['debug'] = true;
+//$app['debug'] = true;
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
 $app->get('/', function() {
